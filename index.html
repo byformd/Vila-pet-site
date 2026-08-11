@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO ===== -->
+<title>Vila Pet Store | Banho, Tosa e Veterinário na Vila Buarque, São Paulo</title>
+<meta name="description" content="Pet shop na Vila Buarque, São Paulo: banho e tosa, veterinário, ração e produtos. Nota 4,9 no Google (192 avaliações). Agende pelo WhatsApp.">
+<meta name="keywords" content="petshop vila buarque, banho e tosa são paulo, veterinário vila buarque, pet shop república, ração são paulo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.vilapetstore.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Vila Pet Store | Pet Shop na Vila Buarque, São Paulo">
+<meta property="og:description" content="Banho e tosa, veterinário, ração e produtos. Nota 4,9 no Google com 192 avaliações. Agende pelo WhatsApp.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Vila Pet Store">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vila Pet Store | Pet Shop na Vila Buarque, São Paulo">
+<meta name="twitter:description" content="Banho e tosa, veterinário, ração e produtos. Nota 4,9 no Google com 192 avaliações.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,600&display=swap" rel="stylesheet">
+
+<!-- ===== Structured data (LocalBusiness) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "Vila Pet Store",
+  "image": "https://www.vilapetstore.com.br/assets/fachada.jpg",
+  "telephone": "+5511913018858",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Santa Isabel, 47",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01221-010",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": ["https://www.instagram.com/vila_pet_store"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "192"
+  }
+}
+</script>
+
+<style>
+  /* =========================================================
+     DESIGN TOKENS
+     ========================================================= */
+  :root{
+    /* color */
+    --teal: #0FA89C;
+    --teal-deep: #0A6E66;
+    --teal-darkest: #0B4B46;
+    --navy: #1E2A44;
+    --pink: #EF6E92;
+    --yellow: #F5B942;
+    --cream: #FBF7EF;
+    --line: #EFE9DB;
+    --ink: #1E2A44;
+    --ink-soft: #4B5568;
+    --ink-mute: #6B7280;
+    --white: #FFFFFF;
+
+    /* spacing scale (mobile-first, 4px base) */
+    --sp-1: 4px;
+    --sp-2: 8px;
+    --sp-3: 12px;
+    --sp-4: 16px;
+    --sp-5: 20px;
+    --sp-6: 28px;
+    --sp-7: 40px;
+    --sp-8: 56px;
+    --sp-9: 80px;
+    --sp-10: 112px;
+
+    /* layout */
+    --container: 1160px;
+    --radius-sm: 14px;
+    --radius: 22px;
+    --radius-lg: 32px;
+
+    /* section rhythm (mobile default, overridden at desktop bp) */
+    --section-y: var(--sp-8);
+    --gap: var(--sp-6);
+  }
+
+  @media (min-width: 900px){
+    :root{
+      --section-y: var(--sp-10);
+      --gap: var(--sp-7);
+    }
+  }
+
+  /* =========================================================
+     RESET
+     ========================================================= */
+  *,*::before,*::after{ box-sizing:border-box; }
+  * { margin:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    font-family:'Nunito Sans', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; padding:0; }
+  button{ font:inherit; cursor:pointer; border:none; background:none; }
+  h1,h2,h3{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    line-height:1.15;
+    color: var(--navy);
+  }
+  :focus-visible{ outline: 3px solid var(--yellow); outline-offset:2px; }
+
+  .skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    background:#fff;
+    color:var(--navy);
+    padding:12px 20px;
+    z-index:200;
+    border-radius: 0 0 10px 0;
+    font-weight:800;
+  }
+  .skip-link:focus{ left:0; top:0; }
+
+  .container{
+    max-width: var(--container);
+    margin-inline:auto;
+    padding-inline: var(--sp-5);
+  }
+  @media (min-width:640px){ .container{ padding-inline: var(--sp-7); } }
+  @media (min-width:1200px){ .container{ padding-inline: var(--sp-8); } }
+
+  .eyebrow{
+    font-family:'Nunito Sans', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+  }
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;
+  }
+
+  /* =========================================================
+     BUTTONS
+     ========================================================= */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:var(--sp-2);
+    padding: 15px 26px;
+    border-radius: 999px;
+    font-weight:800;
+    font-size: 0.96rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    min-height:48px; /* touch target */
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn-primary{ background: var(--yellow); color: var(--navy); }
+  .btn-primary:hover{ box-shadow: 0 10px 24px -8px rgba(245,185,66,0.6); }
+  .btn-ghost{
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.5);
+  }
+  .btn-block{ width:100%; }
+  @media (min-width:640px){ .btn-block{ width:auto; } }
+
+  /* =========================================================
+     HEADER / NAV
+     ========================================================= */
+  header{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background: rgba(11,75,70,0.96);
+    backdrop-filter: blur(8px);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block: var(--sp-3);
+    max-width: var(--container);
+    margin-inline:auto;
+    padding-inline: var(--sp-5);
+    position:relative;
+  }
+  @media (min-width:640px){ .nav{ padding-inline: var(--sp-7); } }
+  .nav-logo img{ height:36px; width:auto; }
+
+  .nav-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:44px; height:44px;
+    color:#fff;
+  }
+  .nav-toggle svg{ width:26px; height:26px; }
+  .nav-toggle .icon-close{ display:none; }
+
+  .nav-panel{
+    position:fixed;
+    inset: 60px 0 0 0;
+    background: var(--teal-darkest);
+    display:flex;
+    flex-direction:column;
+    padding: var(--sp-6) var(--sp-5);
+    gap: var(--sp-2);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index:90;
+  }
+  .nav-panel.is-open{ transform: translateX(0); }
+  .nav-panel a{
+    color: rgba(255,255,255,0.9);
+    font-weight:700;
+    font-size:1.05rem;
+    padding: var(--sp-4) var(--sp-2);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-panel .nav-cta{
+    margin-top: var(--sp-4);
+    background: var(--yellow);
+    color: var(--navy);
+    text-align:center;
+    padding: var(--sp-4);
+    border-radius: 999px;
+    font-weight:800;
+  }
+
+  @media (min-width:900px){
+    .nav-toggle{ display:none; }
+    .nav-panel{
+      position:static;
+      inset:auto;
+      background:none;
+      flex-direction:row;
+      align-items:center;
+      padding:0;
+      gap: var(--sp-6);
+      transform:none;
+      transition:none;
+    }
+    .nav-panel a{
+      border-bottom:none;
+      padding: var(--sp-2) 0;
+      font-size:0.92rem;
+    }
+    .nav-panel .nav-cta{
+      margin-top:0;
+      padding: 10px 20px;
+      white-space:nowrap;
+    }
+  }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero{
+    background: linear-gradient(165deg, var(--teal) 0%, var(--teal-deep) 100%);
+    padding-block-start: var(--sp-8);
+  }
+  .hero-grid{
+    max-width: var(--container);
+    margin-inline:auto;
+    padding-inline: var(--sp-5);
+    display:grid;
+    gap: var(--sp-7);
+    padding-block-end: var(--sp-8);
+  }
+  @media (min-width:640px){ .hero-grid{ padding-inline: var(--sp-7); } }
+  @media (min-width:900px){
+    .hero-grid{
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items:center;
+      padding-block-end: var(--sp-9);
+      padding-inline: var(--sp-8);
+    }
+  }
+
+  .hero-photo{ order:-1; }
+  @media (min-width:900px){ .hero-photo{ order:1; } }
+
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:var(--sp-2);
+    background: rgba(255,255,255,0.14);
+    color:#fff;
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight:700;
+    margin-block-end: var(--sp-5);
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .hero h1{
+    color:#fff;
+    font-size: clamp(1.9rem, 6vw, 2.85rem);
+    margin-block-end: var(--sp-4);
+  }
+  .hero h1 .accent{ color: var(--yellow); }
+  .hero .sub{
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-block-end: var(--sp-6);
+    line-height:1.6;
+  }
+  .hero-ctas{
+    display:flex;
+    flex-direction:column;
+    gap:var(--sp-3);
+  }
+  @media (min-width:480px){ .hero-ctas{ flex-direction:row; flex-wrap:wrap; } }
+
+  .hero-stats{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--sp-4);
+    margin-block-start: var(--sp-7);
+    padding-block-start: var(--sp-6);
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+  .hero-stat b{
+    display:block;
+    font-family:'Baloo 2';
+    color:#fff;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+  }
+  .hero-stat span{
+    display:block;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.8);
+    margin-block-start:2px;
+    line-height:1.35;
+  }
+
+  .hero-photo-frame{
+    position:relative;
+    border-radius: var(--radius-lg);
+    overflow:hidden;
+    aspect-ratio: 4/3.4;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.35);
+  }
+  @media (min-width:900px){ .hero-photo-frame{ aspect-ratio: 4/5; } }
+  .hero-photo-frame img{ width:100%; height:100%; object-fit:cover; }
+  .hero-photo-tag{
+    position:absolute;
+    inset-inline: var(--sp-4);
+    bottom: var(--sp-4);
+    background: rgba(255,255,255,0.95);
+    border-radius: var(--radius-sm);
+    padding: var(--sp-3) var(--sp-4);
+    display:flex;
+    align-items:center;
+    gap: var(--sp-3);
+  }
+  .hero-photo-tag .stars{ color:var(--yellow); font-size:0.9rem; line-height:1; }
+  .hero-photo-tag b{ font-family:'Baloo 2'; color:var(--navy); font-size:0.98rem; }
+  .hero-photo-tag small{ display:block; color: var(--ink-mute); font-size:0.7rem; margin-block-start:2px; }
+
+  /* paw trail divider */
+  .paw-trail{
+    display:flex;
+    justify-content:center;
+    gap: var(--sp-7);
+    padding-block: var(--sp-6);
+  }
+  .paw-trail svg{ width:20px; height:20px; opacity:0.35; }
+  .paw-trail svg:nth-child(2n){ transform: translateY(8px) rotate(-8deg); opacity:0.5;}
+  .paw-trail svg:nth-child(3n){ transform: translateY(-5px) rotate(10deg); }
+
+  /* =========================================================
+     SECTION RHYTHM
+     ========================================================= */
+  section{ padding-block: var(--section-y); }
+  .section-head{
+    max-width: 620px;
+    margin-inline:auto;
+    margin-block-end: var(--sp-7);
+    text-align:center;
+  }
+  .section-head .eyebrow{ color: var(--pink); display:block; margin-block-end: var(--sp-2); }
+  .section-head h2{ font-size: clamp(1.55rem, 4vw, 2.2rem); margin-block-end: var(--sp-3); }
+  .section-head p{ color: var(--ink-soft); font-size:1rem; line-height:1.6; }
+
+  /* =========================================================
+     SOBRE
+     ========================================================= */
+  .about{
+    display:grid;
+    gap: var(--gap);
+    align-items:center;
+  }
+  @media (min-width:900px){ .about{ grid-template-columns: 1fr 1.1fr; } }
+
+  .about-photo{
+    position:relative;
+    border-radius: var(--radius);
+    overflow:hidden;
+    box-shadow: 0 24px 48px -22px rgba(11,75,70,0.35);
+  }
+  .about-photo img{ width:100%; height:100%; object-fit:cover; }
+  .rating-chip{
+    position:absolute;
+    left: var(--sp-4);
+    bottom: var(--sp-4);
+    background: #fff;
+    border-radius: var(--radius-sm);
+    padding: var(--sp-3) var(--sp-4);
+    display:flex;
+    align-items:center;
+    gap: var(--sp-3);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  }
+  .rating-chip b{ font-family:'Baloo 2'; font-size:1.2rem; }
+  .rating-chip .stars{ color: var(--yellow); font-size: 0.9rem; }
+  .rating-chip small{ display:block; color: var(--ink-mute); font-size:0.7rem; }
+
+  .about-text .eyebrow{ color: var(--teal-deep); display:block; margin-block-end: var(--sp-2); }
+  .about-text h2{ font-size: clamp(1.5rem, 4vw, 2.1rem); margin-block-end: var(--sp-4); }
+  .about-text p{ color: var(--ink-soft); line-height:1.7; margin-block-end: var(--sp-3); font-size:1rem; }
+  .badge-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: var(--sp-2);
+    margin-block-start: var(--sp-5);
+  }
+  .badge{
+    background: var(--white);
+    border: 1.5px solid var(--line);
+    color: var(--navy);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight:700;
+  }
+
+  /* =========================================================
+     SERVIÇOS
+     ========================================================= */
+  .services-grid{
+    display:grid;
+    gap: var(--sp-5);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width:560px){ .services-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (min-width:900px){ .services-grid{ grid-template-columns: repeat(3, 1fr); } }
+
+  .service-card{
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: var(--sp-6) var(--sp-5);
+    border: 1px solid var(--line);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  @media (hover:hover){
+    .service-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px -18px rgba(30,42,68,0.25);
+    }
+  }
+  .service-icon{
+    width:52px; height:52px;
+    border-radius: 14px;
+    display:flex; align-items:center; justify-content:center;
+    margin-block-end: var(--sp-4);
+    font-size: 1.5rem;
+  }
+  .service-card:nth-child(1) .service-icon{ background: #E4F7F5; }
+  .service-card:nth-child(2) .service-icon{ background: #FDEBEF; }
+  .service-card:nth-child(3) .service-icon{ background: #FEF4E1; }
+  .service-card:nth-child(4) .service-icon{ background: #E9EEFB; }
+  .service-card:nth-child(5) .service-icon{ background: #E4F7F5; }
+  .service-card h3{ font-size: 1.12rem; margin-block-end: var(--sp-2); }
+  .service-card p{ color: var(--ink-mute); font-size: 0.92rem; line-height:1.55; }
+
+  /* =========================================================
+     AÇÃO SOCIAL
+     ========================================================= */
+  .social-band{
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    margin-inline: var(--sp-5);
+    padding: var(--sp-8) var(--sp-5);
+    color:#fff;
+    text-align:center;
+  }
+  @media (min-width:640px){ .social-band{ margin-inline: var(--sp-7); padding: var(--sp-9) var(--sp-7); } }
+  .social-band .inner{ max-width: 640px; margin-inline:auto; }
+  .social-band .eyebrow{ color: var(--yellow); display:block; margin-block-end: var(--sp-3); }
+  .social-band h2{ color:#fff; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-block-end: var(--sp-4); }
+  .social-band p{ color: rgba(255,255,255,0.85); line-height:1.65; font-size:1rem; margin-block-end: var(--sp-6); }
+
+  /* =========================================================
+     DEPOIMENTOS
+     ========================================================= */
+  .testimonials{
+    display:grid;
+    gap: var(--sp-5);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width:860px){ .testimonials{ grid-template-columns: repeat(3, 1fr); } }
+  .t-card{
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: var(--sp-6) var(--sp-5);
+    border: 1px solid var(--line);
+  }
+  .t-stars{ color: var(--yellow); font-size: 0.9rem; margin-block-end: var(--sp-3); }
+  .t-card p{ color: var(--ink-soft); font-size:0.95rem; line-height:1.6; margin-block-end: var(--sp-4); }
+  .t-author{ display:flex; align-items:center; gap: var(--sp-3); }
+  .t-avatar{
+    width:34px; height:34px; border-radius:50%;
+    background: var(--teal);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:'Baloo 2'; font-weight:700; font-size:0.85rem;
+    flex-shrink:0;
+  }
+  .t-author b{ font-size:0.88rem; display:block; }
+  .t-author span{ font-size:0.75rem; color: var(--ink-mute); }
+
+  /* =========================================================
+     LOCALIZAÇÃO
+     ========================================================= */
+  .location{
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow:hidden;
+    display:grid;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--line);
+  }
+  @media (min-width:860px){ .location{ grid-template-columns: 1fr 1fr; } }
+  .loc-map{ min-height: 260px; position:relative; background: var(--cream); }
+  @media (min-width:860px){ .loc-map{ min-height:100%; } }
+  .loc-map iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .loc-info{ padding: var(--sp-6) var(--sp-5); }
+  @media (min-width:640px){ .loc-info{ padding: var(--sp-7); } }
+  .loc-info h3{ font-size:1.3rem; margin-block-end: var(--sp-5); }
+  .loc-row{ display:flex; gap: var(--sp-3); margin-block-end: var(--sp-4); align-items:flex-start; }
+  .loc-row .ic{
+    width:36px; height:36px; border-radius:10px; flex-shrink:0;
+    background: var(--cream); display:flex; align-items:center; justify-content:center;
+    font-size:1rem;
+  }
+  .loc-row div p{ color: var(--ink-soft); font-size:0.92rem; line-height:1.5; }
+  .loc-row div b{ display:block; font-size:0.92rem; margin-block-end:2px; }
+  .map-link{
+    display:inline-flex; align-items:center; gap: var(--sp-2);
+    margin-block-start: var(--sp-2);
+    color: var(--teal-deep); font-weight:800; font-size:0.88rem;
+    border-bottom: 2px solid var(--teal);
+    padding-block-end: 2px;
+  }
+
+  /* =========================================================
+     CTA FINAL
+     ========================================================= */
+  .final-cta{ text-align:center; }
+  .final-cta h2{ font-size: clamp(1.5rem, 4vw, 2rem); margin-block-end: var(--sp-3); }
+  .final-cta p{ color: var(--ink-soft); margin-block-end: var(--sp-6); }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  footer{
+    background: var(--teal-darkest);
+    color: rgba(255,255,255,0.85);
+    padding-block: var(--sp-8) var(--sp-5);
+  }
+  .footer-grid{
+    max-width: var(--container);
+    margin-inline:auto;
+    padding-inline: var(--sp-5);
+    display:grid;
+    gap: var(--sp-6);
+    grid-template-columns: 1fr;
+    padding-block-end: var(--sp-6);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  @media (min-width:640px){ .footer-grid{ padding-inline: var(--sp-7); } }
+  @media (min-width:720px){ .footer-grid{ grid-template-columns: 1.3fr 1fr 1fr; } }
+  .footer-brand img{ height:32px; margin-block-end: var(--sp-4); }
+  .footer-brand p{ font-size:0.88rem; line-height:1.6; max-width:280px; color: rgba(255,255,255,0.65); }
+  footer h4{ font-family:'Baloo 2'; color:#fff; font-size:0.98rem; margin-block-end: var(--sp-4); }
+  footer li{ margin-block-end: var(--sp-2); font-size:0.88rem; }
+  footer address{ font-style:normal; }
+  footer li a:hover{ color: var(--yellow); }
+  .footer-bottom{
+    max-width: var(--container);
+    margin-inline:auto;
+    padding-inline: var(--sp-5);
+    padding-block-start: var(--sp-5);
+    font-size:0.78rem;
+    color: rgba(255,255,255,0.5);
+    display:flex;
+    flex-direction:column;
+    gap: var(--sp-2);
+  }
+  @media (min-width:640px){
+    .footer-bottom{ padding-inline: var(--sp-7); flex-direction:row; justify-content:space-between; }
+  }
+
+  /* =========================================================
+     WHATSAPP FLOAT
+     ========================================================= */
+  .wa-float{
+    position:fixed;
+    bottom: var(--sp-5);
+    right: var(--sp-5);
+    z-index: 80;
+    background: #25D366;
+    width: 56px; height:56px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease;
+  }
+  .wa-float:hover{ transform: scale(1.08); }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header>
+  <div class="nav">
+    <a href="#" class="nav-logo" aria-label="Vila Pet Store — página inicial">
+      <img src="assets/logo.png" alt="Vila Pet Store" width="700" height="228" style="height:36px;width:auto;">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+
+    <nav class="nav-panel" id="navPanel">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#local">Localização</a>
+      <a class="nav-cta" href="https://wa.me/5511913018858" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-label="Apresentação">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-badge">🐾 1ª pet shop da região com ação social para pets de rua</p>
+        <h1>O petshop onde seu pet <span class="accent">já é da família</span></h1>
+        <p class="sub">Banho e tosa, veterinário, ração e produtos — tudo num só endereço na Vila Buarque. Agende pelo WhatsApp e já saia de lá cheirosinho.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-block" href="https://wa.me/5511913018858" target="_blank" rel="noopener">📱 Agendar pelo WhatsApp</a>
+          <a class="btn btn-ghost btn-block" href="#servicos">Ver serviços</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>4,9 ★</b><span>192 avaliações no Google</span></div>
+          <div class="hero-stat"><b>13 anos</b><span>de bairro, cuidando de pets</span></div>
+          <div class="hero-stat"><b>+800</b><span>tutores que confiam</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img src="assets/cachorro-hero.jpg" alt="Cachorro feliz, cliente da Vila Pet Store" width="600" height="900" fetchpriority="high">
+          <div class="hero-photo-tag">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span><b>4,9 de 5</b><small>192 avaliações no Google</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="paw-trail" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="var(--teal-deep)"><circle cx="12" cy="16" r="5"/><circle cx="4" cy="9" r="2.4"/><circle cx="9" cy="4" r="2.4"/><circle cx="15" cy="4" r="2.4"/><circle cx="20" cy="9" r="2.4"/></svg>
+    <svg viewBox="0 0 24 24" fill="var(--pink)"><circle cx="12" cy="16" r="5"/><circle cx="4" cy="9" r="2.4"/><circle cx="9" cy="4" r="2.4"/><circle cx="15" cy="4" r="2.4"/><circle cx="20" cy="9" r="2.4"/></svg>
+    <svg viewBox="0 0 24 24" fill="var(--yellow)"><circle cx="12" cy="16" r="5"/><circle cx="4" cy="9" r="2.4"/><circle cx="9" cy="4" r="2.4"/><circle cx="15" cy="4" r="2.4"/><circle cx="20" cy="9" r="2.4"/></svg>
+    <svg viewBox="0 0 24 24" fill="var(--teal-deep)"><circle cx="12" cy="16" r="5"/><circle cx="4" cy="9" r="2.4"/><circle cx="9" cy="4" r="2.4"/><circle cx="15" cy="4" r="2.4"/><circle cx="20" cy="9" r="2.4"/></svg>
+  </div>
+
+  <section id="sobre" class="container" aria-labelledby="sobre-h2">
+    <div class="about">
+      <div class="about-photo">
+        <img src="assets/fachada.jpg" alt="Fachada da Vila Pet Store na Rua Santa Isabel, Vila Buarque" width="406" height="900" loading="lazy">
+        <div class="rating-chip">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span><b>4,9</b><small>192 avaliações</small></span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">QUEM SOMOS</p>
+        <h2 id="sobre-h2">Pet shop de bairro, jeito de família</h2>
+        <p>Há 13 anos na Vila Buarque, a Vila Pet Store virou o endereço de confiança de mais de 800 tutores em São Paulo. Aqui, cada pet é recebido pelo nome — e cada tutor também.</p>
+        <p>Somos a primeira pet shop da região com uma ação social para pets em situação de rua, porque acreditamos que cuidado não deveria depender de ter dono.</p>
+        <div class="badge-row">
+          <span class="badge">🏳️‍🌈 Ambiente acolhedor</span>
+          <span class="badge">♿ Acesso para cadeirantes</span>
+          <span class="badge">🚚 Entrega e retirada</span>
+          <span class="badge">💳 Cartão e aproximação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="container" aria-labelledby="servicos-h2">
+    <div class="section-head">
+      <p class="eyebrow">O QUE FAZEMOS</p>
+      <h2 id="servicos-h2">Tudo que seu pet precisa, num só lugar</h2>
+      <p>Do banho de rotina à consulta veterinária — sempre agendado em segundos pelo WhatsApp.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🛁</div>
+        <h3>Banho e tosa</h3>
+        <p>Tosadores experientes e produtos suaves com a pele do pet. Ele entra sujo e sai cheiroso, escovado e feliz da vida.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🩺</div>
+        <h3>Veterinário</h3>
+        <p>Consultas com agenda facilitada direto pelo WhatsApp — sem espera longa e com quem já conhece seu bichinho.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🦴</div>
+        <h3>Ração e produtos</h3>
+        <p>Rações de várias marcas e portes, petiscos, brinquedos e acessórios. Se é pra cão ou gato, provavelmente tem aqui.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🐟</div>
+        <h3>Aquarismo</h3>
+        <p>Peixes, equipamentos e insumos pra quem também cuida de um aquário em casa.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🚚</div>
+        <h3>Entrega e retirada</h3>
+        <p>Peça pelo WhatsApp e escolha: busca na loja ou recebe em casa, sem sair do sofá.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="social-h2">
+    <div class="social-band">
+      <div class="inner">
+        <p class="eyebrow">NOSSO PROPÓSITO</p>
+        <h2 id="social-h2">Cuidado que vai além do balcão</h2>
+        <p>Somos a primeira pet shop da região com uma ação social dedicada a pets em situação de rua. Pra gente, todo focinho merece atenção — com ou sem coleira.</p>
+        <a class="btn btn-primary" href="https://www.instagram.com/vila_pet_store" target="_blank" rel="noopener">Conheça a ação no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="container" aria-labelledby="depo-h2">
+    <div class="section-head">
+      <p class="eyebrow">QUEM JÁ VEIO, VOLTA</p>
+      <h2 id="depo-h2">O que os tutores dizem</h2>
+      <p>Nota 4,9 de 5, com 192 avaliações no Google.</p>
+    </div>
+    <div class="testimonials">
+      <article class="t-card">
+        <div class="t-stars" aria-hidden="true">★★★★★</div>
+        <p>Elogia a rapidez pra marcar horário pelo WhatsApp e o cuidado da equipe, em especial no atendimento veterinário.</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">D</div>
+          <div><b>Dami A.</b><span>Local Guide</span></div>
+        </div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-hidden="true">★★★★★</div>
+        <p>Destaca uma equipe atenciosa e organizada — e conta que o próprio cachorro já reconhece a loja e fica ansioso pra entrar.</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">B</div>
+          <div><b>Bia</b><span>Local Guide</span></div>
+        </div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-hidden="true">★★★★★</div>
+        <p>Sem nenhuma queixa sobre o banho e tosa: a pet sempre volta linda, cheirosa e sem reação aos produtos usados.</p>
+        <div class="t-author">
+          <div class="t-avatar" aria-hidden="true">A</div>
+          <div><b>Ana J.</b><span>Local Guide</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="local" class="container" aria-labelledby="local-h2">
+    <div class="section-head">
+      <p class="eyebrow">ONDE ESTAMOS</p>
+      <h2 id="local-h2">Nos visite na Vila Buarque</h2>
+    </div>
+    <div class="location">
+      <div class="loc-map">
+        <iframe
+          src="https://www.google.com/maps?q=Vila+Pet+Store,R.+Santa+Isabel,47,Vila+Buarque,S%C3%A3o+Paulo&z=16&output=embed"
+          title="Mapa com a localização da Vila Pet Store"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Mapa do Google mostrando a Rua Santa Isabel, 47, Vila Buarque, São Paulo">
+        </iframe>
+      </div>
+      <div class="loc-info">
+        <h3>Vila Pet Store</h3>
+        <div class="loc-row">
+          <div class="ic" aria-hidden="true">📍</div>
+          <address><b>Endereço</b><p>Rua Santa Isabel, 47 — Vila Buarque, São Paulo - SP, 01221-010</p></address>
+        </div>
+        <div class="loc-row">
+          <div class="ic" aria-hidden="true">🕒</div>
+          <div><b>Horário</b><p>Segunda a sexta: 9h às 19h<br>Sábado: 9h às 17h</p></div>
+        </div>
+        <div class="loc-row">
+          <div class="ic" aria-hidden="true">📱</div>
+          <div><b>WhatsApp</b><p>(11) 91301-8858</p></div>
+        </div>
+        <div class="loc-row">
+          <div class="ic" aria-hidden="true">📷</div>
+          <div><b>Instagram</b><p>@vila_pet_store</p></div>
+        </div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Vila+Pet+Store+Rua+Santa+Isabel+47+Vila+Buarque+Sao+Paulo" target="_blank" rel="noopener">Ver rota no Google Maps →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container final-cta" aria-labelledby="cta-h2">
+    <h2 id="cta-h2">Bora marcar o próximo banho?</h2>
+    <p>Chame agora no WhatsApp e agende banho, tosa ou consulta em poucos minutos.</p>
+    <a class="btn btn-primary" href="https://wa.me/5511913018858" target="_blank" rel="noopener">📱 Falar com a Vila Pet Store</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Vila Pet Store" width="700" height="228" style="height:32px;width:auto;">
+      <p>Pet shop de bairro na Vila Buarque, São Paulo, com banho, tosa, veterinário, produtos e uma ação social para pets em situação de rua.</p>
+    </div>
+    <nav aria-label="Navegação do rodapé">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Avaliações</a></li>
+        <li><a href="#local">Localização</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><address style="display:inline">📍 Rua Santa Isabel, 47 — Vila Buarque, SP</address></li>
+        <li>📱 <a href="https://wa.me/5511913018858" target="_blank" rel="noopener">(11) 91301-8858</a></li>
+        <li>📷 <a href="https://www.instagram.com/vila_pet_store" target="_blank" rel="noopener">@vila_pet_store</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vila Pet Store. Todos os direitos reservados.</span>
+    <span>Feito com 🐾 para quem ama pet.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511913018858" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.25 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navPanel = document.getElementById('navPanel');
+  const iconOpen = navToggle.querySelector('.icon-open');
+  const iconClose = navToggle.querySelector('.icon-close');
+
+  function setNav(open){
+    navPanel.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    iconOpen.style.display = open ? 'none' : 'block';
+    iconClose.style.display = open ? 'block' : 'none';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  navToggle.addEventListener('click', () => {
+    setNav(!navPanel.classList.contains('is-open'));
+  });
+
+  navPanel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setNav(false));
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 900) setNav(false);
+  });
+</script>
+
+</body>
+</html>
